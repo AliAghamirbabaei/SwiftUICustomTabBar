@@ -13,16 +13,17 @@ struct CustomTabs: View {
     
     var body: some View {
         HStack {
+            // MARK: - Home
             Button(action: {
                 index = 0
             }) {
                 Image(systemName: "house.fill")
-
             }
             .foregroundColor(.black.opacity(index == 0 ? 1 : 0.2))
             
             Spacer(minLength: 0)
             
+            // MARK: - Search
             Button(action: {
                 index = 1
             }) {
@@ -32,6 +33,7 @@ struct CustomTabs: View {
             
             Spacer(minLength: 0)
             
+            // MARK: - Plus
             Button(action: {
             }) {
                 ZStack {
@@ -49,6 +51,7 @@ struct CustomTabs: View {
             
             Spacer(minLength: 0)
             
+            // MARK: - Heart
             Button(action: {
                 index = 2
             }) {
@@ -58,6 +61,7 @@ struct CustomTabs: View {
             
             Spacer(minLength: 0)
             
+            // MARK: - Person
             Button(action: {
                 index = 3
             }) {
