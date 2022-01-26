@@ -15,7 +15,9 @@ struct CustomTabs: View {
         HStack {
             // MARK: - Home
             Button(action: {
-                index = 0
+                withAnimation(.easeInOut(duration: 0.3)) {
+                    index = 0
+                }
             }) {
                 Image(systemName: "house.fill")
             }
@@ -25,7 +27,9 @@ struct CustomTabs: View {
             
             // MARK: - Search
             Button(action: {
-                index = 1
+                withAnimation(.easeInOut(duration: 0.3)) {
+                    index = 1
+                }
             }) {
                 Image(systemName: "magnifyingglass")
             }
@@ -53,7 +57,9 @@ struct CustomTabs: View {
             
             // MARK: - Heart
             Button(action: {
-                index = 2
+                withAnimation(.easeInOut(duration: 0.3)) {
+                    index = 2
+                }
             }) {
                 Image(systemName: "heart.fill")
             }
@@ -63,7 +69,9 @@ struct CustomTabs: View {
             
             // MARK: - Person
             Button(action: {
-                index = 3
+                withAnimation(.easeInOut(duration: 0.3)) {
+                    index = 3
+                }
             }) {
                 Image(systemName: "person.fill")
             }
