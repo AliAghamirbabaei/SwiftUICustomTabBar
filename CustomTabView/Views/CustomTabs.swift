@@ -1,42 +1,11 @@
 //
-//  ContentView.swift
+//  CustomTabs.swift
 //  CustomTabView
 //
 //  Created by Ali Aghamirbabaei on 1/27/22.
 //
 
 import SwiftUI
-
-struct ContentView: View {
-    @State var index = 0
-    var body: some View {
-        VStack(spacing: 0) {
-            ZStack{
-                switch index {
-                case 0:
-                    Color.red
-                case 1:
-                    Color.yellow
-                case 2:
-                    Color.green
-                case 3:
-                    Color.blue
-                default:
-                    Color.white
-                }
-            }
-            .padding(.bottom, -35)
-            .ignoresSafeArea()
-            CustomTabs(index: $index)
-        }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
 
 struct CustomTabs: View {
     
@@ -100,20 +69,5 @@ struct CustomTabs: View {
         .padding(.top, 35)
         .background(Color.white)
         .clipShape(CShape())
-    }
-}
-
-struct CShape: Shape {
-    func path(in rect: CGRect) -> Path {
-        
-        return Path { path in
-            
-            path.move(to: CGPoint(x:0, y: 35))
-            path.addLine(to: CGPoint(x: 0, y: rect.height))
-            path.addLine(to: CGPoint(x: rect.width, y: rect.height))
-            path.addLine(to: CGPoint(x: rect.width, y: 35))
-            
-            path.addArc(center: CGPoint(x: (rect.width / 2) + 3, y: 35), radius: 35, startAngle: .zero, endAngle: .init(degrees: 180), clockwise: true)
-        }
     }
 }
