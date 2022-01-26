@@ -10,15 +10,10 @@ import SwiftUI
 struct ContentView: View {
     @State var index = 0
     var body: some View {
-        VStack {
-            Spacer()
-            
+        VStack(spacing: 0) {
+
             CustomTabs(index: $index)
         }
-        .background(Color.black
-                        .opacity(0.05)
-                        .edgesIgnoringSafeArea(.top)
-        )
     }
 }
 
@@ -87,7 +82,23 @@ struct CustomTabs: View {
             .foregroundColor(.black.opacity(index == 3 ? 1 : 0.2))
         }
         .padding(.horizontal, 35)
+        .padding(.top, 35)
         .background(Color.white)
+        .clipShape(CShape())
     }
 }
 
+struct CShape: Shape {
+    func path(in rect: CGRect) -> Path {
+        
+        return Path { path in
+            
+            path.move(to: CGPoint(x:0, y: 35))
+            path.addLine(to: CGPoint(x: 0, y: rect.height))
+            path.addLine(to: CGPoint(x: rect.width, y: rect.height))
+            path.addLine(to: CGPoint(x: rect.width, y: 35))
+            
+            path.addArc(center: CGPoint(x: (rect.width / 2) + 3, y: 35), radius: 35, startAngle: .zero, endAngle: .init(degrees: 180), clockwise: true)
+        }
+    }
+}
