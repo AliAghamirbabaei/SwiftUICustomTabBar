@@ -22,6 +22,8 @@ struct CustomTabs: View {
                 Image(systemName: "house.fill")
             }
             .foregroundColor(.black.opacity(index == 0 ? 1 : 0.2))
+            .padding(10)
+            .background(index == 0 ? .red.opacity(0.5) : .white).cornerRadius(8)
             
             Spacer(minLength: 0)
             
@@ -34,6 +36,8 @@ struct CustomTabs: View {
                 Image(systemName: "magnifyingglass")
             }
             .foregroundColor(.black.opacity(index == 1 ? 1 : 0.2))
+            .padding(10)
+            .background(index == 1 ? .yellow.opacity(0.5) : .white).cornerRadius(8)
             
             Spacer(minLength: 0)
             
@@ -64,6 +68,8 @@ struct CustomTabs: View {
                 Image(systemName: "heart.fill")
             }
             .foregroundColor(.black.opacity(index == 2 ? 1 : 0.2))
+            .padding(10)
+            .background(index == 2 ? .green.opacity(0.5) : .white).cornerRadius(8)
             
             Spacer(minLength: 0)
             
@@ -76,6 +82,8 @@ struct CustomTabs: View {
                 Image(systemName: "person.fill")
             }
             .foregroundColor(.black.opacity(index == 3 ? 1 : 0.2))
+            .padding(10)
+            .background(index == 3 ? .blue.opacity(0.5) : .white).cornerRadius(8)
         }
         .padding(.horizontal, 35)
         .padding(.top, 35)

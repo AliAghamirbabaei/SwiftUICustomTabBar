@@ -27,7 +27,6 @@ struct ContentView: View {
             }
             .padding(.bottom, -35)
             .ignoresSafeArea()
-            
             CustomTabs(index: $index)
         }
     }

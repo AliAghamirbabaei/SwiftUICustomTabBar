@@ -11,7 +11,7 @@ import SwiftUI
 struct CustomTabViewApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().preferredColorScheme(.light)
         }
     }
 }
