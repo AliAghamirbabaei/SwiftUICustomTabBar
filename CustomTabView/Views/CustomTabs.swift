@@ -18,12 +18,17 @@ struct CustomTabs: View {
                 Button {
                     withAnimation(.easeInOut(duration: 0.3)) {
                         index = 0
+                        
+                        // Show Home View
                     }
                 } label: {
-                    VStack {
+                    HStack {
                         Image(systemName: "house.fill")
                             .resizable()
                             .frame(width: 20, height: 20)
+                        
+                        Text(index == 0 ? "Home" : "")
+                            .font(.callout)
                     }
                 }
                 .foregroundColor(.black.opacity(index == 0 ? 1 : 0.2))
@@ -37,12 +42,17 @@ struct CustomTabs: View {
                 Button {
                     withAnimation(.easeInOut(duration: 0.3)) {
                         index = 1
+                        
+                        // Show Search View
                     }
                 } label: {
-                    VStack {
+                    HStack {
                         Image(systemName: "magnifyingglass")
                             .resizable()
                             .frame(width: 20, height: 20)
+                        
+                        Text(index == 1 ? "Search" : "")
+                            .font(.callout)
                     }
                 }
                 .foregroundColor(.black.opacity(index == 1 ? 1 : 0.2))
@@ -66,7 +76,8 @@ struct CustomTabs: View {
                 .background(Color("darkBlue"))
                 .clipShape(Circle())
             }
-            .offset(y: -27)
+            .offset(y: -23)
+            .frame(alignment: .center)
             
             HStack {
                 Spacer(minLength: 0)
@@ -75,12 +86,17 @@ struct CustomTabs: View {
                 Button {
                     withAnimation(.easeInOut(duration: 0.3)) {
                         index = 2
+                        
+                        // Show Heart View
                     }
                 } label: {
-                    VStack {
+                    HStack {
                         Image(systemName: "heart.fill")
                             .resizable()
                             .frame(width: 20, height: 20)
+                        
+                        Text(index == 2 ? "Heart" : "")
+                            .font(.callout)
                     }
                 }
                 .foregroundColor(.black.opacity(index == 2 ? 1 : 0.2))
@@ -94,12 +110,17 @@ struct CustomTabs: View {
                 Button {
                     withAnimation(.easeInOut(duration: 0.3)) {
                         index = 3
+                        
+                        // Show Person View
                     }
                 } label: {
-                    VStack {
+                    HStack {
                         Image(systemName: "person.fill")
                             .resizable()
                             .frame(width: 20, height: 20)
+                        
+                        Text(index == 3 ? "Person" : "")
+                            .font(.callout)
                     }
                 }
                 .foregroundColor(.black.opacity(index == 3 ? 1 : 0.2))
@@ -108,8 +129,8 @@ struct CustomTabs: View {
                 .padding(10)
             }
         }
-        .padding(.horizontal, 35)
-        .padding(.top, 35)
+        .padding(.horizontal, 20)
+        .padding(.top, 30)
         .background(Color.white)
         .clipShape(CShape())
     }
