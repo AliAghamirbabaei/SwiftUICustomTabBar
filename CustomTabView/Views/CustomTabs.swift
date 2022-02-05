@@ -47,7 +47,7 @@ struct CustomTabs: View {
                 }
                 .foregroundColor(.black.opacity(index == 1 ? 1 : 0.2))
                 .padding(7)
-                .background(index == 1 ? .green.opacity(0.5) : .white).cornerRadius(8)
+                .background(index == 1 ? .yellow.opacity(0.5) : .white).cornerRadius(8)
                 .padding(10)
                 
                 Spacer(minLength: 0)
@@ -66,11 +66,11 @@ struct CustomTabs: View {
                 .background(Color("darkBlue"))
                 .clipShape(Circle())
             }
-            .offset(y: -25)
-            
-            Spacer(minLength: 0)
+            .offset(y: -27)
             
             HStack {
+                Spacer(minLength: 0)
+                
                 // MARK: - Heart
                 Button {
                     withAnimation(.easeInOut(duration: 0.3)) {
@@ -85,7 +85,7 @@ struct CustomTabs: View {
                 }
                 .foregroundColor(.black.opacity(index == 2 ? 1 : 0.2))
                 .padding(7)
-                .background(index == 2 ? .blue.opacity(0.5) : .white).cornerRadius(8)
+                .background(index == 2 ? .green.opacity(0.5) : .white).cornerRadius(8)
                 .padding(10)
                 
                 Spacer(minLength: 0)
@@ -104,7 +104,7 @@ struct CustomTabs: View {
                 }
                 .foregroundColor(.black.opacity(index == 3 ? 1 : 0.2))
                 .padding(7)
-                .background(index == 3 ? Color(UIColor.systemIndigo).opacity(0.5) : .white).cornerRadius(8)
+                .background(index == 3 ? .blue.opacity(0.5) : .white).cornerRadius(8)
                 .padding(10)
             }
         }
